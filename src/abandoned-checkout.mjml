@@ -13,11 +13,11 @@
 		</mj-attributes>
 		<mj-style>
 			@media (prefers-color-scheme: dark) {
-				body { background-color: #0e1411 !important; }
+				html, body { background-color: #0e1411 !important; }
 				.body-bg, .body-bg table, .body-bg td { background-color: #0e1411 !important; }
 				.card, .card table, .card td { background-color: #19231c !important; }
 				td.facts, .facts table, .facts td { background-color: #212d24 !important; }
-				.btn, table.btn, td.btn, .btn table, .btn td { background-color: #35755a !important; }
+				.btn table td { background-color: #35755a !important; }
 				.btn a { background-color: #35755a !important; color: #eef5ef !important; }
 				.card div, .card td { color: #e7ede8 !important; }
 				.kicker div { color: #8ec3a4 !important; }
