@@ -4,61 +4,75 @@
 		<mj-preview>{{event.property_name}} is still available for {{event.check_in | date: "%b %-d"}}. Your details are saved.</mj-preview>
 		<mj-attributes>
 			<mj-all font-family="Georgia, 'Times New Roman', serif" />
-			<mj-text font-size="16px" line-height="26px" color="#1f2a24" />
-			<mj-section background-color="#ffffff" padding="0 32px" />
-			<mj-class name="h1" font-size="26px" line-height="34px" font-weight="700" color="#14211b" />
-			<mj-class name="meta" font-size="13px" line-height="20px" color="#5c6b62" />
-			<mj-class name="btn" background-color="#1d5c45" color="#ffffff" font-size="16px" font-weight="700" inner-padding="16px 36px" border-radius="8px" />
+			<mj-text font-size="16px" line-height="26px" color="#212b25" padding="0" />
+			<mj-section padding="0" />
+			<mj-class name="kicker" font-family="Helvetica, Arial, sans-serif" font-size="11px" line-height="16px" font-weight="700" letter-spacing="2.5px" text-transform="uppercase" color="#1a5a43" />
+			<mj-class name="h1" font-size="30px" line-height="38px" font-weight="400" color="#1a251f" />
+			<mj-class name="meta" font-family="Helvetica, Arial, sans-serif" font-size="13px" line-height="20px" color="#5d6c62" />
+			<mj-class name="btn" background-color="#1a5a43" color="#f4f9f5" font-family="Helvetica, Arial, sans-serif" font-size="16px" font-weight="700" letter-spacing="0.25px" inner-padding="16px 24px" border-radius="10px" width="100%" padding="40px 0 0" />
 		</mj-attributes>
 		<mj-style>
-			.fact-row td { padding: 6px 0; font-size: 15px; color: #1f2a24; }
-			.fact-row .k { color: #5c6b62; width: 40%; }
 			@media (prefers-color-scheme: dark) {
-				.body-bg { background-color: #101513 !important; }
-				.card { background-color: #1a221e !important; }
-				.card h1, .card p, .card td { color: #e8ede9 !important; }
-				.muted { color: #9fb0a6 !important; }
+				body { background-color: #0e1411 !important; }
+				.body-bg, .body-bg table, .body-bg td { background-color: #0e1411 !important; }
+				.card, .card table, .card td { background-color: #19231c !important; }
+				td.facts, .facts table, .facts td { background-color: #212d24 !important; }
+				.btn, table.btn, td.btn, .btn table, .btn td { background-color: #35755a !important; }
+				.btn a { background-color: #35755a !important; color: #eef5ef !important; }
+				.card div, .card td { color: #e7ede8 !important; }
+				.kicker div { color: #8ec3a4 !important; }
+				.muted div { color: #9bae9f !important; }
+				td.fk { color: #94a89b !important; }
+				td.fr { border-bottom-color: #2c382f !important; }
+				.wm div { color: #8ec3a4 !important; }
+				.footer div, .footer a { color: #8fa295 !important; }
 			}
 		</mj-style>
 	</mj-head>
-	<mj-body background-color="#eef2ef" css-class="body-bg">
-		<mj-section padding="28px 32px 12px">
+	<mj-body background-color="#e9efe9" css-class="body-bg" width="640px">
+		<mj-section padding="40px 32px 24px">
 			<mj-column>
-				<mj-text mj-class="meta" align="center" letter-spacing="2px" text-transform="uppercase" font-family="Helvetica, Arial, sans-serif">Wavecrest Stays</mj-text>
+				<mj-text css-class="wm" align="center" font-size="14px" line-height="20px" letter-spacing="3px" text-transform="uppercase" color="#1a5a43">Wavecrest Stays</mj-text>
 			</mj-column>
 		</mj-section>
 
-		<mj-wrapper padding="0 16px 32px">
-			<mj-section border-radius="12px" padding="36px 36px 8px" css-class="card">
-				<mj-column>
-					<mj-text mj-class="h1">Still thinking it over, {{customer.first_name}}?</mj-text>
-					<mj-text padding-top="8px">{{event.property_name}} is still open for your dates, and everything you entered is saved. Two minutes and it is yours.</mj-text>
-				</mj-column>
-			</mj-section>
-
-			<mj-section padding="8px 36px" css-class="card">
-				<mj-column background-color="#f2f6f3" border-radius="10px" padding="18px 22px">
-					<mj-table css-class="fact-row">
-						<tr><td class="k">Dates</td><td>{{event.check_in | date: "%b %-d"}} to {{event.check_out | date: "%b %-d"}}</td></tr>
-						<tr><td class="k">Guests</td><td>{{event.guests}}</td></tr>
-						<tr><td class="k">Total</td><td>{{event.total | money}} all in, no surprise fees at the door</td></tr>
+		<mj-wrapper padding="0 16px">
+			<mj-section css-class="card" background-color="#fbfbf7" border-radius="16px" padding="48px 40px">
+				<mj-column padding="0">
+					<mj-text mj-class="kicker" css-class="kicker">Your stay is waiting</mj-text>
+					<mj-text mj-class="h1" padding="16px 0 0">Still thinking it over, {{customer.first_name}}?</mj-text>
+					<mj-text padding="16px 0 0">{{event.property_name}} is still open for your dates, and everything you entered is saved. Two minutes and it is yours.</mj-text>
+					<mj-table cellpadding="0" cellspacing="0" padding="32px 0 0">
+						<tr>
+							<td class="facts" bgcolor="#f0f5f0" style="background-color: #f0f5f0; border-radius: 12px; padding: 10px 24px;">
+								<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="fk fr" width="34%" style="padding: 14px 12px 14px 0; border-bottom: 1px solid #dde6de; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #5d6c62; vertical-align: top;">Dates</td>
+										<td class="fr" style="padding: 14px 0; border-bottom: 1px solid #dde6de; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 24px; color: #212b25;">{{event.check_in | date: "%b %-d"}} to {{event.check_out | date: "%b %-d"}}</td>
+									</tr>
+									<tr>
+										<td class="fk fr" width="34%" style="padding: 14px 12px 14px 0; border-bottom: 1px solid #dde6de; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #5d6c62; vertical-align: top;">Guests</td>
+										<td class="fr" style="padding: 14px 0; border-bottom: 1px solid #dde6de; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 24px; color: #212b25;">{{event.guests}}</td>
+									</tr>
+									<tr>
+										<td class="fk" width="34%" style="padding: 14px 12px 14px 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #5d6c62; vertical-align: top;">Total</td>
+										<td style="padding: 14px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 24px; color: #212b25;">{{event.total | money}} all in, no surprise fees at the door</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
 					</mj-table>
-				</mj-column>
-			</mj-section>
-
-			<mj-section padding="16px 36px 40px" css-class="card">
-				<mj-column>
-					<mj-button mj-class="btn" href="{{event.resume_url}}" font-family="Helvetica, Arial, sans-serif">Finish your booking</mj-button>
-					<mj-text mj-class="meta" css-class="muted" align="center" padding-top="14px">{% if event.dates_high_demand %}These dates booked out last season. We can hold them, but not for long.{% else %}Questions first? Just reply, a person reads these.{% endif %}</mj-text>
+					<mj-button mj-class="btn" css-class="btn" href="{{event.resume_url}}">Finish your booking</mj-button>
+					<mj-text mj-class="meta" css-class="muted" align="center" padding="16px 0 0">{% if event.dates_high_demand %}These dates booked out last season. We can hold them, but not for long.{% else %}Questions first? Just reply, a person reads these.{% endif %}</mj-text>
 				</mj-column>
 			</mj-section>
 		</mj-wrapper>
 
-		<mj-section padding="0 32px 40px" background-color="transparent">
+		<mj-section padding="32px 32px 48px">
 			<mj-column>
-				<mj-text mj-class="meta" css-class="muted" align="center" font-family="Helvetica, Arial, sans-serif">
+				<mj-text mj-class="meta" css-class="footer" align="center" font-size="12px">
 					Wavecrest Stays, 4012 Croatan Hwy, Nags Head NC<br />
-					<a href="{% unsubscribe_url %}" style="color:#5c6b62;">Unsubscribe</a> from reminders like this one.
+					<a href="{% unsubscribe_url %}" style="color: #5d6c62;">Unsubscribe</a> from reminders like this one.
 				</mj-text>
 			</mj-column>
 		</mj-section>

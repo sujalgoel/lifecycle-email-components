@@ -71,60 +71,85 @@
     }
   </style>
   <style type="text/css">
-    .price-table td {
-      padding: 8px 0;
-      font-size: 15px;
-      color: #1f2a24;
-    }
-
-    .price-table .total td {
-      padding-top: 14px;
-      border-top: 1px solid #d8e0db;
-      font-weight: 700;
-    }
-
-    .amount {
-      text-align: right;
-    }
-
     @media (prefers-color-scheme: dark) {
-      .body-bg {
-        background-color: #101513 !important;
+      body {
+        background-color: #0e1411 !important;
       }
 
-      .card {
-        background-color: #1a221e !important;
+      .body-bg,
+      .body-bg table,
+      .body-bg td {
+        background-color: #0e1411 !important;
       }
 
-      .card h1,
-      .card p,
+      .card,
+      .card table,
       .card td {
-        color: #e8ede9 !important;
+        background-color: #19231c !important;
       }
 
-      .muted {
-        color: #9fb0a6 !important;
+      .btn,
+      table.btn,
+      td.btn,
+      .btn table,
+      .btn td {
+        background-color: #35755a !important;
+      }
+
+      .btn a {
+        background-color: #35755a !important;
+        color: #eef5ef !important;
+      }
+
+      .card div,
+      .card td {
+        color: #e7ede8 !important;
+      }
+
+      .kicker div {
+        color: #8ec3a4 !important;
+      }
+
+      .muted div {
+        color: #9bae9f !important;
+      }
+
+      td.pr {
+        border-bottom-color: #2c382f !important;
+      }
+
+      td.pt {
+        border-top-color: #578f72 !important;
+      }
+
+      .wm div {
+        color: #8ec3a4 !important;
+      }
+
+      .footer div,
+      .footer a {
+        color: #8fa295 !important;
       }
     }
   </style>
 </head>
 
-<body class="body-bg" style="word-spacing:normal;background-color:#eef2ef;">
+<body class="body-bg" style="word-spacing:normal;background-color:#e9efe9;">
   <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Confirmed: {{event.property_name}}, {{event.check_in | date: "%b %-d"}} to {{event.check_out | date: "%b %-d"}}. Full breakdown inside.</div>
-  <div aria-label="Your booking is confirmed" aria-roledescription="email" role="article" lang="und" dir="auto" style="word-spacing:normal;background-color:#eef2ef;">
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
+  <div aria-label="Your booking is confirmed" aria-roledescription="email" role="article" lang="und" dir="auto" style="word-spacing:normal;background-color:#e9efe9;">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:640px;" width="640" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:640px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:28px 32px 12px;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:536px;" ><![endif]-->
+            <td style="direction:ltr;font-size:0px;padding:40px 32px 24px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:576px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Helvetica, Arial, sans-serif;font-size:13px;letter-spacing:2px;line-height:20px;text-align:center;text-transform:uppercase;color:#5c6b62;">Wavecrest Stays</div>
+                      <td align="center" class="wm" style="font-size:0px;padding:0;word-break:break-word;">
+                        <div style="font-family:Georgia, 'Times New Roman', serif;font-size:14px;letter-spacing:3px;line-height:20px;text-align:center;text-transform:uppercase;color:#1a5a43;">Wavecrest Stays</div>
                       </td>
                     </tr>
                   </tbody>
@@ -136,108 +161,83 @@
         </tbody>
       </table>
     </div>
-    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="margin:0px auto;max-width:600px;">
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:640px;" width="640" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:640px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0 16px 32px;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="card-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="card-outlook" role="presentation" style="width:568px;" width="568" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div class="card" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:568px;border-radius:12px;overflow:hidden;">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;border-collapse:separate;">
+            <td style="direction:ltr;font-size:0px;padding:0 16px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="card-outlook" width="640px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="card-outlook" role="presentation" style="width:608px;" width="608" bgcolor="#fbfbf7" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div class="card" style="background:#fbfbf7;background-color:#fbfbf7;margin:0px auto;max-width:608px;border-radius:16px;overflow:hidden;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fbfbf7;background-color:#fbfbf7;width:100%;border-collapse:separate;">
                   <tbody>
                     <tr>
-                      <td style="border-radius:12px;direction:ltr;font-size:0px;padding:36px 36px 8px;text-align:center;">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:496px;" ><![endif]-->
+                      <td style="border-radius:16px;direction:ltr;font-size:0px;padding:48px 40px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:528px;" ><![endif]-->
                         <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                             <tbody>
                               <tr>
-                                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                  <div style="font-family:Georgia, 'Times New Roman', serif;font-size:26px;font-weight:700;line-height:34px;text-align:left;color:#14211b;">You are booked, {{customer.first_name}}.</div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td align="left" style="font-size:0px;padding:10px 25px;padding-top:8px;word-break:break-word;">
-                                  <div style="font-family:Georgia, 'Times New Roman', serif;font-size:16px;line-height:26px;text-align:left;color:#1f2a24;">{{event.property_name}} is confirmed for {{event.guests}} guests, {{event.check_in | date: "%A %-d %B"}} to {{event.check_out | date: "%A %-d %B"}}. Confirmation number {{event.booking_id}}.</div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <!--[if mso | IE]></td></tr></table><![endif]-->
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="card-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="card-outlook" role="presentation" style="width:568px;" width="568" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div class="card" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:568px;">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
-                  <tbody>
-                    <tr>
-                      <td style="direction:ltr;font-size:0px;padding:8px 36px;text-align:center;">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:496px;" ><![endif]-->
-                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                            <tbody>
-                              <tr>
-                                <td align="left" class="price-table" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                  <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Georgia, 'Times New Roman', serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-                                    <tr>
-                                      <td>{{event.nights}} nights x {{event.nightly_rate | money}}</td>
-                                      <td class="amount">{{event.accommodation_total | money}}</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Cleaning fee</td>
-                                      <td class="amount">{{event.cleaning_fee | money}}</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Taxes</td>
-                                      <td class="amount">{{event.taxes | money}}</td>
-                                    </tr>
-                                    <tr class="total">
-                                      <td>Charged to your card</td>
-                                      <td class="amount">{{event.total | money}}</td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <!--[if mso | IE]></td></tr></table><![endif]-->
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="card-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="card-outlook" role="presentation" style="width:568px;" width="568" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div class="card" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:568px;">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
-                  <tbody>
-                    <tr>
-                      <td style="direction:ltr;font-size:0px;padding:12px 36px 40px;text-align:center;">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:496px;" ><![endif]-->
-                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                            <tbody>
-                              <tr>
-                                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                                <td style="vertical-align:top;padding:0;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                                     <tbody>
                                       <tr>
-                                        <td align="center" bgcolor="#1d5c45" role="presentation" style="border:none;border-radius:8px;cursor:auto;mso-padding-alt:16px 36px;background:#1d5c45;" valign="middle">
-                                          <a href="{{event.manage_url}}" style="display:inline-block;background:#1d5c45;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:700;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:16px 36px;mso-padding-alt:0px;border-radius:8px;" target="_blank"> Manage your booking </a>
+                                        <td align="left" class="kicker" style="font-size:0px;padding:0;word-break:break-word;">
+                                          <div style="font-family:Helvetica, Arial, sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;line-height:16px;text-align:left;text-transform:uppercase;color:#1a5a43;">Booking confirmed</div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:16px 0 0;word-break:break-word;">
+                                          <div style="font-family:Georgia, 'Times New Roman', serif;font-size:30px;font-weight:400;line-height:38px;text-align:left;color:#1a251f;">You are booked, {{customer.first_name}}.</div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:16px 0 0;word-break:break-word;">
+                                          <div style="font-family:Georgia, 'Times New Roman', serif;font-size:16px;line-height:26px;text-align:left;color:#212b25;">{{event.property_name}} is confirmed for {{event.guests}} guests, {{event.check_in | date: "%A %-d %B"}} to {{event.check_out | date: "%A %-d %B"}}. Confirmation number {{event.booking_id}}.</div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:32px 0 0;word-break:break-word;">
+                                          <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Georgia, 'Times New Roman', serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                            <tr>
+                                              <td class="pr" style="padding: 12px 0; border-bottom: 1px solid #e2e9e3; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25;">{{event.nights}} nights x {{event.nightly_rate | money}}</td>
+                                              <td class="pr" align="right" style="padding: 12px 0 12px 16px; border-bottom: 1px solid #e2e9e3; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25; text-align: right; white-space: nowrap;">{{event.accommodation_total | money}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pr" style="padding: 12px 0; border-bottom: 1px solid #e2e9e3; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25;">Cleaning fee</td>
+                                              <td class="pr" align="right" style="padding: 12px 0 12px 16px; border-bottom: 1px solid #e2e9e3; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25; text-align: right; white-space: nowrap;">{{event.cleaning_fee | money}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 12px 0 16px; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25;">Taxes</td>
+                                              <td align="right" style="padding: 12px 0 16px 16px; font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 22px; color: #212b25; text-align: right; white-space: nowrap;">{{event.taxes | money}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="pt" style="padding: 16px 0 0; border-top: 1px solid #1a5a43; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 24px; font-weight: 700; color: #1a251f;">Charged to your card</td>
+                                              <td class="pt" align="right" style="padding: 16px 0 0 16px; border-top: 1px solid #1a5a43; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 24px; font-weight: 700; color: #1a251f; text-align: right; white-space: nowrap;">{{event.total | money}}</td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" class="btn" style="font-size:0px;padding:40px 0 0;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:100%;line-height:100%;">
+                                            <tbody>
+                                              <tr>
+                                                <td align="center" bgcolor="#1a5a43" role="presentation" style="border:none;border-radius:10px;cursor:auto;mso-padding-alt:16px 24px;background:#1a5a43;" valign="middle">
+                                                  <a href="{{event.manage_url}}" style="display:inline-block;background:#1a5a43;color:#f4f9f5;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:700;line-height:120%;letter-spacing:0.25px;margin:0;text-decoration:none;text-transform:none;padding:16px 24px;mso-padding-alt:0px;border-radius:10px;" target="_blank"> Manage your booking </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" class="muted" style="font-size:0px;padding:16px 0 0;word-break:break-word;">
+                                          <div style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:center;color:#5d6c62;">Check-in from 4pm. Door code arrives by text the morning of arrival.</div>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td align="center" class="muted" style="font-size:0px;padding:10px 25px;padding-top:14px;word-break:break-word;">
-                                  <div style="font-family:Georgia, 'Times New Roman', serif;font-size:13px;line-height:20px;text-align:center;color:#5c6b62;">Check-in from 4pm. Door code arrives by text the morning of arrival.</div>
                                 </td>
                               </tr>
                             </tbody>
@@ -255,20 +255,20 @@
         </tbody>
       </table>
     </div>
-    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="transparent" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="background:transparent;background-color:transparent;margin:0px auto;max-width:600px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:transparent;background-color:transparent;width:100%;">
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:640px;" width="640" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:640px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0 32px 40px;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:536px;" ><![endif]-->
+            <td style="direction:ltr;font-size:0px;padding:32px 32px 48px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:576px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" class="muted" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:center;color:#5c6b62;">Wavecrest Stays, 4012 Croatan Hwy, Nags Head NC<br />
-                          <a href="{% unsubscribe_url %}" style="color:#5c6b62;">Unsubscribe</a> from marketing email. Booking emails always send.
+                      <td align="center" class="footer" style="font-size:0px;padding:0;word-break:break-word;">
+                        <div style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:20px;text-align:center;color:#5d6c62;">Wavecrest Stays, 4012 Croatan Hwy, Nags Head NC<br />
+                          <a href="{% unsubscribe_url %}" style="color: #5d6c62;">Unsubscribe</a> from marketing email. Booking emails always send.
                         </div>
                       </td>
                     </tr>
