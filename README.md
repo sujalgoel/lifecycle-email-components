@@ -8,8 +8,8 @@ The source carries [Customer.io](https://customer.io) Liquid untouched (`{{custo
 
 | Email | Rendered with sample data | Compiled, Liquid intact |
 | --- | --- | --- |
-| Booking confirmation | [preview](https://raw.githack.com/sujalgoel/lifecycle-email-components/master/preview/booking-confirmation.html) | [dist](https://raw.githack.com/sujalgoel/lifecycle-email-components/master/dist/booking-confirmation.html) |
-| Abandoned checkout | [preview](https://raw.githack.com/sujalgoel/lifecycle-email-components/master/preview/abandoned-checkout.html) | [dist](https://raw.githack.com/sujalgoel/lifecycle-email-components/master/dist/abandoned-checkout.html) |
+| Booking confirmation | [preview](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/preview/booking-confirmation.html) | [dist](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/dist/booking-confirmation.html) |
+| Abandoned checkout | [preview](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/preview/abandoned-checkout.html) | [dist](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/dist/abandoned-checkout.html) |
 
 Both respond to your OS appearance: view them with the system in dark mode to see the designed dark palette, not an auto-inversion.
 
