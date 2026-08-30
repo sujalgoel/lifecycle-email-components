@@ -1,0 +1,12 @@
+{
+	"name": "lifecycle-email-components",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Lifecycle emails for a consumer booking flow, built as MJML components",
+	"scripts": {
+		"build": "mjml src/booking-confirmation.mjml -o dist/booking-confirmation.html && mjml src/abandoned-checkout.mjml -o dist/abandoned-checkout.html"
+	},
+	"devDependencies": {
+		"mjml": "^5.4.0"
+	}
+}

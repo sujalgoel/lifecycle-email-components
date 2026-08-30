@@ -1,0 +1,66 @@
+<mjml>
+	<mj-head>
+		<mj-title>Your dates are still open</mj-title>
+		<mj-preview>{{event.property_name}} is still available for {{event.check_in | date: "%b %-d"}}. Your details are saved.</mj-preview>
+		<mj-attributes>
+			<mj-all font-family="Georgia, 'Times New Roman', serif" />
+			<mj-text font-size="16px" line-height="26px" color="#1f2a24" />
+			<mj-section background-color="#ffffff" padding="0 32px" />
+			<mj-class name="h1" font-size="26px" line-height="34px" font-weight="700" color="#14211b" />
+			<mj-class name="meta" font-size="13px" line-height="20px" color="#5c6b62" />
+			<mj-class name="btn" background-color="#1d5c45" color="#ffffff" font-size="16px" font-weight="700" inner-padding="16px 36px" border-radius="8px" />
+		</mj-attributes>
+		<mj-style>
+			.fact-row td { padding: 6px 0; font-size: 15px; color: #1f2a24; }
+			.fact-row .k { color: #5c6b62; width: 40%; }
+			@media (prefers-color-scheme: dark) {
+				.body-bg { background-color: #101513 !important; }
+				.card { background-color: #1a221e !important; }
+				.card h1, .card p, .card td { color: #e8ede9 !important; }
+				.muted { color: #9fb0a6 !important; }
+			}
+		</mj-style>
+	</mj-head>
+	<mj-body background-color="#eef2ef" css-class="body-bg">
+		<mj-section padding="28px 32px 12px">
+			<mj-column>
+				<mj-text mj-class="meta" align="center" letter-spacing="2px" text-transform="uppercase" font-family="Helvetica, Arial, sans-serif">Wavecrest Stays</mj-text>
+			</mj-column>
+		</mj-section>
+
+		<mj-wrapper padding="0 16px 32px">
+			<mj-section border-radius="12px" padding="36px 36px 8px" css-class="card">
+				<mj-column>
+					<mj-text mj-class="h1">Still thinking it over, {{customer.first_name}}?</mj-text>
+					<mj-text padding-top="8px">{{event.property_name}} is still open for your dates, and everything you entered is saved. Two minutes and it is yours.</mj-text>
+				</mj-column>
+			</mj-section>
+
+			<mj-section padding="8px 36px" css-class="card">
+				<mj-column background-color="#f2f6f3" border-radius="10px" padding="18px 22px">
+					<mj-table css-class="fact-row">
+						<tr><td class="k">Dates</td><td>{{event.check_in | date: "%b %-d"}} to {{event.check_out | date: "%b %-d"}}</td></tr>
+						<tr><td class="k">Guests</td><td>{{event.guests}}</td></tr>
+						<tr><td class="k">Total</td><td>{{event.total | money}} all in, no surprise fees at the door</td></tr>
+					</mj-table>
+				</mj-column>
+			</mj-section>
+
+			<mj-section padding="16px 36px 40px" css-class="card">
+				<mj-column>
+					<mj-button mj-class="btn" href="{{event.resume_url}}" font-family="Helvetica, Arial, sans-serif">Finish your booking</mj-button>
+					<mj-text mj-class="meta" css-class="muted" align="center" padding-top="14px">{% if event.dates_high_demand %}These dates booked out last season. We can hold them, but not for long.{% else %}Questions first? Just reply, a person reads these.{% endif %}</mj-text>
+				</mj-column>
+			</mj-section>
+		</mj-wrapper>
+
+		<mj-section padding="0 32px 40px" background-color="transparent">
+			<mj-column>
+				<mj-text mj-class="meta" css-class="muted" align="center" font-family="Helvetica, Arial, sans-serif">
+					Wavecrest Stays, 4012 Croatan Hwy, Nags Head NC<br />
+					<a href="{% unsubscribe_url %}" style="color:#5c6b62;">Unsubscribe</a> from reminders like this one.
+				</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>
