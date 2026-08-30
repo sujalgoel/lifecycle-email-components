@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wavecrest Stays, lifecycle email components</title>
+<style>
+	:root { color-scheme: light dark; }
+	body { margin: 0; background: #e9efe9; color: #212b25; font: 16px/1.6 Georgia, 'Times New Roman', serif; }
+	.wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 72px; }
+	.brand { font-family: Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #1a5a43; text-align: center; margin: 0 0 40px; }
+	h1 { font-size: 30px; line-height: 1.25; font-weight: 400; color: #1a251f; margin: 0 0 12px; }
+	p.lede { margin: 0 0 36px; }
+	.card { background: #fbfbf7; border-radius: 16px; padding: 28px 32px; margin: 0 0 20px; }
+	.card h2 { font-size: 20px; font-weight: 700; color: #1a251f; margin: 0 0 4px; }
+	.card p { font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #5d6c62; margin: 0 0 16px; }
+	.links a { display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f4f9f5; background: #1a5a43; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin: 0 8px 8px 0; }
+	.links a.ghost { background: transparent; color: #1a5a43; border: 1px solid #1a5a43; }
+	.foot { font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #5d6c62; text-align: center; margin-top: 36px; }
+	.foot a { color: #1a5a43; }
+	@media (prefers-color-scheme: dark) {
+		body { background: #0e1411; color: #e7ede8; }
+		h1, .card h2 { color: #e7ede8; }
+		.card { background: #19231c; }
+		.brand, .foot a, .links a.ghost { color: #8ec3a4; }
+		.links a.ghost { border-color: #35755a; }
+		.links a { background: #35755a; color: #eef5ef; }
+		.links a.ghost { background: transparent; }
+		.card p, .foot { color: #9bae9f; }
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<p class="brand">Wavecrest Stays</p>
+		<h1>Lifecycle email components</h1>
+		<p class="lede">Two production-shaped emails for a consumer booking brand, built in MJML with Customer.io Liquid intact, Outlook VML fallbacks, and a designed dark mode. Flip your OS appearance and reload to see both palettes.</p>
+
+		<div class="card">
+			<h2>Booking confirmation</h2>
+			<p>Transactional. Full price breakdown, unmistakable total row, manage-booking action.</p>
+			<div class="links">
+				<a href="preview/booking-confirmation.html">View with sample data</a>
+				<a class="ghost" href="dist/booking-confirmation.html">Compiled, Liquid intact</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<h2>Abandoned checkout</h2>
+			<p>Marketing. Boarding-pass style stay summary, resume action, conditional urgency line.</p>
+			<div class="links">
+				<a href="preview/abandoned-checkout.html">View with sample data</a>
+				<a class="ghost" href="dist/abandoned-checkout.html">Compiled, Liquid intact</a>
+			</div>
+		</div>
+
+		<p class="foot">Source, build and design notes: <a href="https://github.com/sujalgoel/lifecycle-email-components">github.com/sujalgoel/lifecycle-email-components</a></p>
+	</div>
+</body>
+</html>

@@ -6,6 +6,8 @@ The source carries [Customer.io](https://customer.io) Liquid untouched (`{{custo
 
 ## Live previews
 
+**Live site: https://sujalgoel.github.io/lifecycle-email-components/**
+
 | Email | Rendered with sample data | Compiled, Liquid intact |
 | --- | --- | --- |
 | Booking confirmation | [preview](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/preview/booking-confirmation.html) | [dist](https://rawcdn.githack.com/sujalgoel/lifecycle-email-components/e63bae9b4116/dist/booking-confirmation.html) |
